@@ -28,19 +28,19 @@ export const encodeGraphqlRequestData = (shortcode: string) => {
     __hs: "19624.HYP:instagram_web_pkg.2.1..0.0",
     dpr: "3",
     __ccg: "UNKNOWN",
-    __rev: "1008824440",
-    __s: "xf44ne:zhh75g:xr51e7",
-    __hsi: "7282217488877343271",
+    __rev: "1014225007",
+    __s: "tenn85:noxj0g:5mecg3",
+    __hsi: "7380267066089280555",
     __dyn:
-      "7xeUmwlEnwn8K2WnFw9-2i5U4e0yoW3q32360CEbo1nEhw2nVE4W0om78b87C0yE5ufz81s8hwGwQwoEcE7O2l0Fwqo31w9a9x-0z8-U2zxe2GewGwso88cobEaU2eUlwhEe87q7-0iK2S3qazo7u1xwIw8O321LwTwKG1pg661pwr86C1mwraCg",
+      "7xeUjG1mxu1syUbFp40NonwgU7SbzEdF8aUco2qwJw5ux609vCwjE1xoswaq0yE7i0n24oaEd86a3a1YwBgao6C0Mo2iyo7u3i4U2zxe2GewGw9a362W2K0zK5o4q3y1Sx-0iS2Sq2-azo7u1xwIwbS1LwTwKG1pg2Xwr86C1mwrd6goK2O4UrAwCAxW6Uf9EObzVU8U",
     __csr:
-      "gZ3yFmJkillQvV6ybimnG8AmhqujGbLADgjyEOWz49z9XDlAXBJpC7Wy-vQTSvUGWGh5u8KibG44dBiigrgjDxGjU0150Q0848azk48N09C02IR0go4SaR70r8owyg9pU0V23hwiA0LQczA48S0f-x-27o05NG0fkw",
+      "s8gqPhSBkLin5FuAJWmmGQB9ivETGOuiVG9KFFQiiQtJeQHLBVWjiy7Kq4pUy-FcFJ4F4AVF-A8zt7zppah94lki4QcJ-XL-Zbzumax2mq4rwwgy8iCgmG_zpEjBGVA4ogtel1eCi8yKUoJ0Axam9w05tUxa5dwry1uh042g0VW07J4x98bo60sQaxe363a1Ixa0zoixja0cnwd20vAU0-Su0ia00BO8",
     __comet_req: "7",
-    lsd: "AVqbxe3J_YA",
-    jazoest: "2957",
-    __spin_r: "1008824440",
+    lsd: "AVp1qTQY1qE",
+    jazoest: "2910",
+    __spin_r: "1014225007",
     __spin_b: "trunk",
-    __spin_t: "1695523385",
+    __spin_t: "1718352331",
     fb_api_caller_class: "RelayModern",
     fb_api_req_friendly_name: "PolarisPostActionLoadPostQueryQuery",
     variables: JSON.stringify({
@@ -57,7 +57,7 @@ export const encodeGraphqlRequestData = (shortcode: string) => {
       hoisted_reply_id: "null",
     }),
     server_timestamps: "true",
-    doc_id: "10015901848480474",
+    doc_id: "25531498899829322",
   };
   const encoded = querystring.stringify(requestData);
   return encoded;

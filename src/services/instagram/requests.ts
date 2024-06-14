@@ -44,7 +44,7 @@ export async function getPostGraphqlData({
       Accept: "*/*",
       "Accept-Language": "en-US,en;q=0.5",
       "Content-Type": "application/x-www-form-urlencoded",
-      "X-FB-Friendly-Name": "PolarisPostActionLoadPostQueryQuery",
+      "X-FB-Friendly-Name": "QuickPromotionIGWebBatchFetchQuery",
       "X-CSRFToken": "RVDUooU5MYsBbS1CNN3CzVAuEP8oHB52",
       "X-IG-App-ID": "1217981644879628",
       "X-FB-LSD": "AVqbxe3J_YA",
@@ -53,7 +53,7 @@ export async function getPostGraphqlData({
       "Sec-Fetch-Mode": "cors",
       "Sec-Fetch-Site": "same-origin",
       "User-Agent":
-        "Mozilla/5.0 (Linux; Android 11; SAMSUNG SM-G973U) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/14.2 Chrome/87.0.4280.141 Mobile Safari/537.36",
+        "Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1 Edg/125.0.0.0",
     },
   });
 
