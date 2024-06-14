@@ -1,4 +1,4 @@
 export const InstagramEndpoints = {
   GetByPost: `/p`,
-  GetByGraphQL: `/api/graphql/query`,
+  GetByGraphQL: `/graphql/query`,
 } as const;
