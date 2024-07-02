@@ -3,8 +3,7 @@ import { NextResponse } from "next/server";
 import { HTTPError } from "@/lib/errors";
 import { makeErrorResponse, makeSuccessResponse } from "@/lib/http";
 import { INSTAGRAM_CONFIGS } from "@/features/instagram/constants";
-import { getPostIdFromUrl } from "@/features/instagram/utils";
-const instagramGetUrl = require("instagram-url-direct");
+const instagramDl = require("@sasmeee/igdl");
 function handleError(error: any) {
   if (error instanceof HTTPError) {
     const response = makeErrorResponse(error.message);
@@ -29,6 +28,7 @@ export async function GET(request: Request) {
   }
 
   // const postId = getPostIdFromUrl(postUrl);
-  let links = await instagramGetUrl(postUrl);
+  // let links = await igdl(postUrl);
+  const links = await instagramDl(postUrl);
   return NextResponse.json(links, { status: 200 });
 }
