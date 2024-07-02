@@ -28,27 +28,16 @@ const getVideoJsonFromHTML = async (postId: string) => {
 const getVideoJSONFromGraphQL = async (postId: string) => {
   const data = await getPostGraphqlData({ postId });
 
-  const mediaData = data.data?.xdt_shortcode_media;
-
-  if (!mediaData) {
-    return null;
-  }
-
-  if (!mediaData.is_video) {
-    throw new HTTPError("This post is not a video", 400);
-  }
-
-  const videoInfo = formatGraphqlJson(mediaData);
-  return videoInfo;
+  return data;
 };
 
 export const getVideoInfo = async (postId: string) => {
-  let videoInfo: VideoInfo | null = null;
+  let videoInfo: any = null;
 
-  if (INSTAGRAM_CONFIGS.enableWebpage) {
-    videoInfo = await getVideoJsonFromHTML(postId);
-    if (videoInfo) return videoInfo;
-  }
+  // if (INSTAGRAM_CONFIGS.enableWebpage) {
+  //   videoInfo = await getVideoJsonFromHTML(postId);
+  //   if (videoInfo) return videoInfo;
+  // }
 
   if (INSTAGRAM_CONFIGS.enableGraphQL) {
     videoInfo = await getVideoJSONFromGraphQL(postId);
