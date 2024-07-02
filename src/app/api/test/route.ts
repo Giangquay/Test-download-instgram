@@ -33,8 +33,15 @@ export async function GET(request: Request) {
   }
 
   const postId = getPostIdFromUrl(postUrl);
-  const data = axios.get(
-    `https://www.instagram.com/p/${postId}/?__a=1&__d=dis`
+  const data = await axios.get(
+    `https://www.instagram.com/p/${postId}/?__a=1&__d=dis`,
+    {
+      headers: {
+        "Content-Type": "application/json",
+        Cookie:
+          "csrftoken=GY8fc5OXHKrtFDs4C3tdqyfZPh1gixde; ig_did=8C45A16A-CBCC-4DDE-A290-45D326C6DA2A; ig_nrcb=1; mid=ZoN_zwAEAAHVSo0NOROu1Ah4lrnS",
+      },
+    }
   );
-  return NextResponse.json(data, { status: 200 });
+  return NextResponse.json(data.data, { status: 200 });
 }
