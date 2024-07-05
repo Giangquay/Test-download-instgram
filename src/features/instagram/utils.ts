@@ -37,7 +37,7 @@ export const encodeGraphqlRequestData = (shortcode: string) => {
       "gg8dMzsl5TFqtO5nOAjtqHRmAJp24ZGiBJlq-GhQjGHVeQVuHBheUBfBzWmmVfCFaQqECA8Dx2iQXhF9WgCWpqWAG6p44VGCLAHUz-V99VqCUbrUCtoxqBHxfDzEkBDyXypFUC5XoCegy00lO20Ejwywc50r21v-04TU0rXDhFRC50bW0M8y5t3A2MMfut8M2Tx507rw9K0NE1G41w40147w5vzE02gMw",
     __comet_req: "7",
     lsd: "AVr6h1MO5Go",
-    jazoest: "2863",
+    jazoest: "2934",
     __spin_r: "1014604059",
     __spin_b: "trunk",
     __spin_t: "1719891087",
