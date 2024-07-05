@@ -3,7 +3,12 @@ import { NextResponse } from "next/server";
 import { HTTPError } from "@/lib/errors";
 import { makeErrorResponse, makeSuccessResponse } from "@/lib/http";
 import { INSTAGRAM_CONFIGS } from "@/features/instagram/constants";
-const instagramDl = require("@sasmeee/igdl");
+import { getPostIdFromUrl } from "@/features/instagram/utils";
+// const instagramDl = require("@sasmeee/igdl");
+
+// // const { igdl } = require("imran-download-servar");
+// const instagramGetUrl = require("instagram-url-direct");
+
 function handleError(error: any) {
   if (error instanceof HTTPError) {
     const response = makeErrorResponse(error.message);
@@ -27,8 +32,8 @@ export async function GET(request: Request) {
     return NextResponse.json(badRequestResponse, { status: 400 });
   }
 
-  // const postId = getPostIdFromUrl(postUrl);
-  // let links = await igdl(postUrl);
-  const links = await instagramDl(postUrl);
-  return NextResponse.json(links, { status: 200 });
+  const postId = getPostIdFromUrl(postUrl);
+  // let links = await instagramDl(postUrl);
+  // const links = await instagramDl(postUrl);
+  return NextResponse.json(postId, { status: 200 });
 }
