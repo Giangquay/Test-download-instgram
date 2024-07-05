@@ -36,6 +36,7 @@
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.51.2",
     "react-icons": "^4.11.0",
+    "snapsave-downloader2": "^6.9.5",
     "tailwindcss-animate": "^1.0.7",
     "zod": "^3.22.4"
   },

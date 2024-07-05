@@ -5,7 +5,7 @@ import { makeErrorResponse, makeSuccessResponse } from "@/lib/http";
 
 import { VideoInfo } from "@/types";
 import { INSTAGRAM_CONFIGS } from "@/features/instagram/constants";
-import instagramGetUrl from "@/features/instagram/utils";
+const snapsave = require("snapsave-downloader2");
 function handleError(error: any) {
   if (error instanceof HTTPError) {
     const response = makeErrorResponse(error.message);
@@ -29,6 +29,6 @@ export async function GET(request: Request) {
     return NextResponse.json(badRequestResponse, { status: 400 });
   }
 
-  const postId = instagramGetUrl(postUrl);
+  const postId = snapsave(postUrl);
   return NextResponse.json(postId, { status: 200 });
 }
