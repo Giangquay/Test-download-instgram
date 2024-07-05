@@ -20,6 +20,8 @@ export async function getPostPageHTML({
       "Sec-Fetch-Dest": "document",
       "Sec-Fetch-Mode": "navigate",
       "Sec-Fetch-Site": "same-origin",
+      cookie:
+        "csrftoken=zf4aArXJGDuGuyBEbZqKH3; ps_n=1; ps_l=1; dpr=1.1979166269302368; mid=Zod1EQALAAFk1-UprG7EwvyLx6Uj; ig_did=F95F348E-15EF-4756-81A3-96A4B8DC5895; ig_nrcb=1; wd=1595x272; _js_datr=GHWHZm08nlb6tQGYAOlh-TPr",
       "User-Agent":
         "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/117.0",
     },
