@@ -29,6 +29,7 @@ export async function GET(request: Request) {
     return NextResponse.json(badRequestResponse, { status: 400 });
   }
 
-  const postId = snapsave(postUrl);
+  const postId = await snapsave(postUrl);
+  console.log(postId);
   return NextResponse.json(postId, { status: 200 });
 }
