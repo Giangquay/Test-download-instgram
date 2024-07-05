@@ -4,10 +4,8 @@ import { HTTPError } from "@/lib/errors";
 import { makeErrorResponse, makeSuccessResponse } from "@/lib/http";
 
 import { VideoInfo } from "@/types";
-import { getVideoInfo } from "@/features/instagram";
 import { INSTAGRAM_CONFIGS } from "@/features/instagram/constants";
-import { getPostIdFromUrl } from "@/features/instagram/utils";
-
+import instagramGetUrl from "@/features/instagram/utils";
 function handleError(error: any) {
   if (error instanceof HTTPError) {
     const response = makeErrorResponse(error.message);
@@ -31,17 +29,6 @@ export async function GET(request: Request) {
     return NextResponse.json(badRequestResponse, { status: 400 });
   }
 
-  const postId = getPostIdFromUrl(postUrl);
-  if (!postId) {
-    const noPostIdResponse = makeErrorResponse("Invalid Post URL");
-    return NextResponse.json(noPostIdResponse, { status: 400 });
-  }
-
-  try {
-    const postJson = await getVideoInfo(postId);
-    const response = makeSuccessResponse<VideoInfo>(postJson);
-    return NextResponse.json(response, { status: 200 });
-  } catch (error: any) {
-    return handleError(error);
-  }
+  const postId = instagramGetUrl(postUrl);
+  return NextResponse.json(postId, { status: 200 });
 }
