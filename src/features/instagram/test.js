@@ -43,11 +43,21 @@ module.exports = instagramVid = (url_media) => {
       downloadItems.each((index, element) => {
         const downloadLink = $(element)
           .find(".download-items__btn > a")
-          .attr("href")
+          .attr("href").replace("&dl=1", "")
         result.push(downloadLink)
       })
 
-      let igresponse = { results_number: result.length, url_list: result }
+      const responseContent = await axios.get(`https://i.instagram.com/api/v1/oembed/?url=${url_media}`)
+      let caption = null;
+      let author = null;
+      let thumbnail = null;
+      if (responseContent) {
+        caption = responseContent.data.title;
+        author = responseContent.data.author_name;
+        thumbnail = responseContent.data.thumbnail_url;
+      }
+
+      let igresponse = { results_number: result.length, datas: result, author, caption, thumbnail }
       resolve(igresponse)
     } catch (err) {
       reject(err)
