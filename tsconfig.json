@@ -28,7 +28,8 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "src/lib/instagram.js"
+    "src/lib/instagram.js",
+    "src/features/instagram/test.js"
   ],
   "exclude": ["node_modules"]
 }

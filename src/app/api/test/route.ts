@@ -4,6 +4,7 @@ import { HTTPError } from "@/lib/errors";
 import { makeErrorResponse, makeSuccessResponse } from "@/lib/http";
 import { INSTAGRAM_CONFIGS } from "@/features/instagram/constants";
 import instagramGetUrl from "@/features/instagram/utils";
+import instagramVid from "@/features/instagram/test";
 // const instagramDl = require("@sasmeee/igdl");
 
 // // const { igdl } = require("imran-download-servar");
@@ -32,7 +33,7 @@ export async function GET(request: Request) {
     return NextResponse.json(badRequestResponse, { status: 400 });
   }
 
-  const postId = instagramGetUrl(postUrl);
+  const postId = instagramVid(postUrl);
   // let links = await instagramDl(postUrl);
   // const links = await instagramDl(postUrl);
   return NextResponse.json(postId, { status: 200 });
