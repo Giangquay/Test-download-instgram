@@ -1,9 +1,8 @@
-const axios = require("axios").default
-const qs = require("qs")
-const cheerio = require('cheerio')
+const axios = require("axios").default;
+const qs = require("qs");
+const cheerio = require('cheerio');
 
-
-module.exports = instagramVid = (url_media) => {
+const instagramVid = (url_media) => {
   return new Promise(async (resolve, reject) => {
     try {
       const BASE_URL = "https://v3.saveig.app/api/ajaxSearch";
@@ -83,4 +82,6 @@ module.exports = instagramVid = (url_media) => {
       reject(err);
     }
   });
-}
+};
+
+export default instagramVid;

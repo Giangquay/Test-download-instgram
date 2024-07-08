@@ -2,8 +2,6 @@ import { NextResponse } from "next/server";
 
 import { HTTPError } from "@/lib/errors";
 import { makeErrorResponse, makeSuccessResponse } from "@/lib/http";
-
-import { VideoInfo } from "@/types";
 import { INSTAGRAM_CONFIGS } from "@/features/instagram/constants";
 import instagramVid from "@/features/instagram/test";
 const snapsave = require("snapsave-downloader2");
