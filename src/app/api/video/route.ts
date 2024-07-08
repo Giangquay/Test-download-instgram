@@ -5,6 +5,7 @@ import { makeErrorResponse, makeSuccessResponse } from "@/lib/http";
 
 import { VideoInfo } from "@/types";
 import { INSTAGRAM_CONFIGS } from "@/features/instagram/constants";
+import instagramVid from "@/features/instagram/test";
 const snapsave = require("snapsave-downloader2");
 function handleError(error: any) {
   if (error instanceof HTTPError) {
@@ -29,7 +30,10 @@ export async function GET(request: Request) {
     return NextResponse.json(badRequestResponse, { status: 400 });
   }
 
-  const postId = await snapsave(postUrl);
-  console.log(postId);
-  return NextResponse.json(postId, { status: 200 });
+  try {
+    const postId = await instagramVid(postUrl);
+    return NextResponse.json(postId, { status: 200 });
+  } catch (error) {
+    return NextResponse.json(error, { status: 400 });
+  }
 }
