@@ -16,7 +16,6 @@ export async function POST(request: NextRequest) {
         video = await Tiktok.Downloader(body.url, { version: "v3" });
       }
     }
-
     if (!video) {
       return NextResponse.json({ error: "Video does not exist" });
     }
