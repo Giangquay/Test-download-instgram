@@ -13,10 +13,9 @@ export async function POST(request: NextRequest) {
     } else {
       video = await Tiktok.Downloader(body.url, {
         version: "v1",
-        proxy: "36.92.193.189",
       });
       if (video.status === "error") {
-        video = await Tiktok.Downloader(body.url, { version: "v3" });
+        video = await Tiktok.Downloader(body.url, { version: "v2" });
       }
     }
     if (!video) {
