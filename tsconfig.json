@@ -29,7 +29,8 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "src/lib/instagram.js",
-    "src/features/instagram/test.js"
+    "src/features/instagram/test.js",
+    "src/pages/api/fetchtiktok/index.js"
   ],
   "exclude": ["node_modules"]
 }
