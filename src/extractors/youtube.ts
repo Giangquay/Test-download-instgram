@@ -14,6 +14,7 @@ function convertToHoursMinutesSeconds(seconds: any): string {
 }
 
 function extractVideoYT(
+  id: string,
   url: string,
   videoDetails: any,
   thumbnail_url: any,
@@ -54,7 +55,7 @@ function extractVideoYT(
     }
   });
   return {
-    // id,
+    id,
     origin_url: url,
     author: _.get(videoDetails, "author"),
     thumbnail_pc: videoDetails.thumbnails,
