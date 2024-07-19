@@ -5,6 +5,7 @@ import {
 import { NextApiRequest, NextApiResponse } from "next";
 import _ from "lodash";
 const ytdl = require("@distube/ytdl-core");
+const fs = require("fs");
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   if (req.method === "POST") {
     try {
@@ -27,7 +28,6 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
           error: "link youtube is not exists",
         });
       }
-      // const infor = await ytdl.getInfo(body.url);
       const videoFormats: any = await ytdl.filterFormats(
         formats,
         "audioandvideo"
